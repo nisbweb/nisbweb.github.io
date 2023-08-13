@@ -40,6 +40,9 @@ window.addEventListener("DOMContentLoaded", () => {
         "WIE": "./assets/images/wie.png",
         "CS": "./assets/images/cs.png",
         "CASS": "./assets/images/cas.png",
+        "RAS": "./assets/images/ras.png",
+        "GRSS": "./assets/images/grss.png"
+
     }
 
     function GetDate(timestamp) {
