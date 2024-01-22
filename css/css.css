@@ -108,6 +108,38 @@ body::-webkit-scrollbar-thumb {
   background-color: transparent !important;
 }
 
+/* BDC Marquee Div */
+.bdc-marquee-div{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.bdc-marquee-div:hover{
+  text-decoration: underline;
+  color: white;
+}
+.bdc-marquee-div h2{
+  font-size: 2rem;
+  text-wrap: nowrap;
+  font-weight: bold;
+  animation: marquee-scroll 5s linear infinite;
+}
+.bdc-marquee-div h2::before{
+  content: '🩸';
+}
+.bdc-marquee-div::-webkit-scrollbar{
+  display: none;
+}
+@keyframes marquee-scroll {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
 /* Special Title */
 
 .special-title {
