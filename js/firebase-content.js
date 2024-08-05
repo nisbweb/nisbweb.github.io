@@ -71,7 +71,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     <h2>${docs[i].name}</h2>
                 </header>${docs[i].date}<br style="display:none;">
                 <p>
-                    <img src="https://drive.google.com/uc?id=${docs[i].imgUrl}" alt="">
+                    <img src="https://drive.google.com/thumbnail?id=${docs[i].imgUrl}" alt="">
                 </p>
                 <div class="card-author">
                     <a class="author-avatar" href="#">
