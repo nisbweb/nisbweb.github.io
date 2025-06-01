@@ -313,7 +313,6 @@
           
           <br /><br /><br /><br /><br />
           <div class="special-title" style="padding-bottom: 15px;" id="publications-section">Read our publications..</div>
-          <div id="confetti-container" style="position: absolute; width: 100%; height: 100%; pointer-events: none; z-index: 1000; display: none;"></div>
           <div class="columns" style="display: flex; gap: 80px; justify-content: center; flex-wrap: wrap;">
             <div class="pub column">
               <img src="./assets/images/MANAS'25.png" alt="Manas 2025" style="height: 280px;"/>
@@ -1036,42 +1035,5 @@
     <script src="js/timer-hero.js"></script>
     <script src="js/timer-top.js"></script>
     <script src="js/announcement.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script>
-  // Confetti animation when publications section comes into view
-  document.addEventListener('DOMContentLoaded', function() {
-    const publicationsSection = document.getElementById('publications-section');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Trigger confetti animation
-          const fireConfetti = () => {
-            confetti({
-              particleCount: 150,
-              spread: 70,
-              origin: { y: 0.6 },
-              colors: ['#db0b5f', '#ffffff', '#00b0ff'],
-              zIndex: 10000
-            });
-          };
-          
-          // Run confetti 3 times with delay
-          fireConfetti();
-          setTimeout(fireConfetti, 300);
-          setTimeout(fireConfetti, 600);
-          
-          // Unobserve after first trigger
-          observer.unobserve(publicationsSection);
-        }
-      });
-    }, { 
-      threshold: 0.5,
-      rootMargin: '0px 0px -100px 0px' // Triggers when 100px from bottom of viewport
-    });
-    
-    observer.observe(publicationsSection);
-  });
-</script>
   </body>
 </html>
