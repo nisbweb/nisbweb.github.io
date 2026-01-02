@@ -1,0 +1,59 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Node / JS
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Builds / output
+dist/
+build/
+.out/
+.next/
+.nuxt/
+public/build/
+.cache/
+.parcel-cache/
+coverage/
+.nyc_output/
+
+# Environment / secrets
+.env
+.env.*.local
+.env.local
+.env.test
+credentials.json
+google-service-account.json
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.iml
+
+# TypeScript
+*.tsbuildinfo
+
+# Python (if present)
+__pycache__/
+*.py[cod]
+venv/
+env/
+.venv/
+
+# Misc
+*.log
+*.tmp
+*.swp
+*.swo
+.DS_Store?
