@@ -57,3 +57,4 @@ env/
 *.swp
 *.swo
 .DS_Store?
+assets/.DS_Store
