@@ -315,11 +315,11 @@
           <div class="special-title" style="padding-bottom: 15px;" id="publications-section">Read our publications..</div>
           <div class="columns" style="display: flex; gap: 80px; justify-content: center; flex-wrap: wrap;">
             <div class="pub column">
-              <img src="./assets/images/MANAS'25.png" alt="Manas 2025" style="height: 280px;"/>
+              <img src="./assets/images/Manas 26.png" alt="Manas 2025" style="height: 280px;"/>
               <div>
                 <h1>MANAS</h1>
                 <h4>NISB Half Yearly Newsletter</h4>
-                <a href="https://drive.google.com/file/d/1V7JVR6mtqH_IbmW7XdJJnWBVhQiTNQuR/view?usp=drive_link" target="_blank">Read more -></a>
+                <a href="https://drive.google.com/file/d/1vVmUZAEInhrjzz7Y8xEkxK9KLmmdFa25/view?usp=sharing" target="_blank">Read more -></a>
               </div>
             </div>
             <div class="pub column">
@@ -1025,5 +1025,42 @@
     <script src="js/timer-hero.js"></script>
     <script src="js/timer-top.js"></script>
     <script src="js/announcement.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+  // Confetti animation when publications section comes into view
+  document.addEventListener('DOMContentLoaded', function() {
+    const publicationsSection = document.getElementById('publications-section');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Trigger confetti animation
+          const fireConfetti = () => {
+            confetti({
+              particleCount: 220,
+              spread: 180,
+              origin: { y: 0.5 },
+              colors: ['#d6c372', '#ffffff', '	#bec7c7'],
+              zIndex: 10000
+            });
+          };
+          
+          // Run confetti 3 times with delay
+          fireConfetti();
+          setTimeout(fireConfetti, 300);
+          setTimeout(fireConfetti, 600);
+          setTimeout(fireConfetti, 900);
+          // Unobserve after first trigger
+          observer.unobserve(publicationsSection);
+        }
+      });
+    }, { 
+      threshold: 0.5,
+      rootMargin: '0px 0px -100px 0px' // Triggers when 100px from bottom of viewport
+    });
+    
+    observer.observe(publicationsSection);
+  });
+</script>
   </body>
 </html>
